@@ -13,20 +13,20 @@
 .intro {
   height: 100vh;
   padding: 50vh;
-  background: grey;
+  background: var(--background);
   background-size: cover;
   background-blend-mode: multiply;
-  color: white;
+  color: var(--text);
   text-align: center;
 }
 
 .about {
   height: 90vh;
   padding: 45vh;
-  background: black;
+  background: var(--background);
   background-size: cover;
   background-blend-mode: multiple;
-  color: white;
+  color: var(--text);
   text-align: center;
   
 }

@@ -1,6 +1,7 @@
 <template>
     <header>
         <a href="#"><img src="../../assets/white_clean.png" alt="Logo" class="nav-icon"></a>
+        <a href="#"><img src="../../assets/white_clean.png" alt="Logo" class="nav-icon"></a>
         <nav>
             <ul class="nav-items">
                 <li><a href="#" class="nav-link">Home</a></li>
@@ -8,14 +9,15 @@
                 <li><a href="#" class="nav-link">My Stuff</a></li>
                 <li class="switch-list-item">
                   <label class="switch">
-                    <v-icon color="var(--paleSpring)">mdi-white-balance-sunny</v-icon>
+                    <v-icon color="var(--primary)">mdi-white-balance-sunny</v-icon>
                     <div>
-                      <input type="checkbox" />
+                      <input type="checkbox" v-model="dark" @change="swapMode"/>
                       <span class="slider"></span>
                     </div>
-                    <v-icon color="var(--paleSpring)">mdi-moon-waning-crescent</v-icon>
+                    <v-icon color="var(--primary)">mdi-moon-waning-crescent</v-icon>
                   </label>
                 </li>
+                <li><p>{{ dark }}</p></li>
             </ul>
         </nav>
     </header>
@@ -25,6 +27,7 @@
 
 
 export default {
+    emits: 'modeChange',
     data() {
         return {
             dark: false
@@ -32,7 +35,7 @@ export default {
     },
     methods: {
         swapMode() {
-            this.dark = !this.dark;
+            this.$emit('modeChange');
         }
     }
 }
@@ -71,6 +74,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
+    color: var(--text);
 }
 
 /* Lightmode Button Styles */
@@ -85,7 +89,7 @@ v-icon {
 
 .slider {
     transition: background-color 0.6s ease, color 1s ease;
-    background-color: var(--mint);
+    background-color: var(--primary);
     transition: 0.4s;
     border-radius: 100%;
     height: 3vh;
@@ -105,7 +109,7 @@ v-icon {
     position: relative;
     display: flex;
     align-items: center;
-    background: var(--darkBlue);
+    background: var(--background);
     width: 5vh;
     border-radius: 50px;
     padding: 0 5px;
