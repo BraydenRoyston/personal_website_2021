@@ -1,4 +1,5 @@
-# app
+# 2021 Personal Website
+This is a 2021 rendition of my old personal website built with Vue3 and Nuxt.
 
 ## Build Setup
 
