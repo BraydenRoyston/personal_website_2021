@@ -17,6 +17,15 @@
   "LayoutTopSpacer": {
     "description": "Auto imported from components/Layout/TopSpacer.vue"
   },
+  "TypographyDynamicHeading": {
+    "description": "Auto imported from components/Typography/DynamicHeading.vue"
+  },
+  "TypographyPrimaryHeading": {
+    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
+  },
+  "TypographySecondaryHeading": {
+    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
+  },
   "SectionsBioSection": {
     "description": "Auto imported from components/Sections/BioSection.vue"
   },
@@ -37,14 +46,5 @@
   },
   "UserInterfaceSocialButton": {
     "description": "Auto imported from components/UserInterface/SocialButton.vue"
-  },
-  "TypographyDynamicHeading": {
-    "description": "Auto imported from components/Typography/DynamicHeading.vue"
-  },
-  "TypographyPrimaryHeading": {
-    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
-  },
-  "TypographySecondaryHeading": {
-    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
   }
 }

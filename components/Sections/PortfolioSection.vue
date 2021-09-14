@@ -54,7 +54,6 @@
                     
                 </div>
             </div>
-            <div class="filtersSpacerCells"></div>
             <div class="cellWrapper">
                 <transition-group tag="ul" name="project-list" id="ul-projects" appear>
                     <PortfolioCell
@@ -472,12 +471,8 @@ h3 {
     .businessTopics {
         flex-wrap: wrap;
     }
-    .filtersSpacerCells {
-        height: 200px;
-        width: 100%;
-    }
     .cellWrapper {
-        margin-top: 10vh;
+        margin-top: 7vh;
     }
 }
 </style>

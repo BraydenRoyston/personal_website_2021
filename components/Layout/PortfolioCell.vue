@@ -58,13 +58,10 @@ export default {
 <style scoped>
 .cellWrapper {
     width: 83vw !important;
-    height: 250px;
 
-    /* background: white; */
     border-radius: 10px;
     border: 1px solid var(--text);
     transition: border-color 1s ease;
-    /* box-shadow: 0 1px 2px 0 var(--text), 0 1.5px 5px 0 var(--text); */
     
     display: flex;
     flex-direction: column;
