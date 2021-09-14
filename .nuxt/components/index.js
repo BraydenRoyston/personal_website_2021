@@ -1,18 +1,18 @@
-export const LayoutNavBar = () => import('../../components/Layout/NavBar.vue' /* webpackChunkName: "components/layout-nav-bar" */).then(c => wrapFunctional(c.default || c))
-export const LayoutNavSpacer = () => import('../../components/Layout/NavSpacer.vue' /* webpackChunkName: "components/layout-nav-spacer" */).then(c => wrapFunctional(c.default || c))
-export const LayoutPortfolioCell = () => import('../../components/Layout/PortfolioCell.vue' /* webpackChunkName: "components/layout-portfolio-cell" */).then(c => wrapFunctional(c.default || c))
-export const LayoutSocialRow = () => import('../../components/Layout/SocialRow.vue' /* webpackChunkName: "components/layout-social-row" */).then(c => wrapFunctional(c.default || c))
-export const LayoutTopSpacer = () => import('../../components/Layout/TopSpacer.vue' /* webpackChunkName: "components/layout-top-spacer" */).then(c => wrapFunctional(c.default || c))
-export const TypographyDynamicHeading = () => import('../../components/Typography/DynamicHeading.vue' /* webpackChunkName: "components/typography-dynamic-heading" */).then(c => wrapFunctional(c.default || c))
-export const TypographyPrimaryHeading = () => import('../../components/Typography/PrimaryHeading.vue' /* webpackChunkName: "components/typography-primary-heading" */).then(c => wrapFunctional(c.default || c))
-export const TypographySecondaryHeading = () => import('../../components/Typography/SecondaryHeading.vue' /* webpackChunkName: "components/typography-secondary-heading" */).then(c => wrapFunctional(c.default || c))
-export const SectionsBioSection = () => import('../../components/Sections/BioSection.vue' /* webpackChunkName: "components/sections-bio-section" */).then(c => wrapFunctional(c.default || c))
-export const SectionsFooterSection = () => import('../../components/Sections/FooterSection.vue' /* webpackChunkName: "components/sections-footer-section" */).then(c => wrapFunctional(c.default || c))
-export const SectionsIntroSection = () => import('../../components/Sections/IntroSection.vue' /* webpackChunkName: "components/sections-intro-section" */).then(c => wrapFunctional(c.default || c))
-export const SectionsPortfolioSection = () => import('../../components/Sections/PortfolioSection.vue' /* webpackChunkName: "components/sections-portfolio-section" */).then(c => wrapFunctional(c.default || c))
-export const UserInterfaceModeButton = () => import('../../components/UserInterface/ModeButton.vue' /* webpackChunkName: "components/user-interface-mode-button" */).then(c => wrapFunctional(c.default || c))
-export const UserInterfaceScrollButton = () => import('../../components/UserInterface/ScrollButton.vue' /* webpackChunkName: "components/user-interface-scroll-button" */).then(c => wrapFunctional(c.default || c))
-export const UserInterfaceSocialButton = () => import('../../components/UserInterface/SocialButton.vue' /* webpackChunkName: "components/user-interface-social-button" */).then(c => wrapFunctional(c.default || c))
+export { default as LayoutNavBar } from '../..\\components\\Layout\\NavBar.vue'
+export { default as LayoutNavSpacer } from '../..\\components\\Layout\\NavSpacer.vue'
+export { default as LayoutPortfolioCell } from '../..\\components\\Layout\\PortfolioCell.vue'
+export { default as LayoutSocialRow } from '../..\\components\\Layout\\SocialRow.vue'
+export { default as LayoutTopSpacer } from '../..\\components\\Layout\\TopSpacer.vue'
+export { default as SectionsBioSection } from '../..\\components\\Sections\\BioSection.vue'
+export { default as SectionsFooterSection } from '../..\\components\\Sections\\FooterSection.vue'
+export { default as SectionsIntroSection } from '../..\\components\\Sections\\IntroSection.vue'
+export { default as SectionsPortfolioSection } from '../..\\components\\Sections\\PortfolioSection.vue'
+export { default as TypographyDynamicHeading } from '../..\\components\\Typography\\DynamicHeading.vue'
+export { default as TypographyPrimaryHeading } from '../..\\components\\Typography\\PrimaryHeading.vue'
+export { default as TypographySecondaryHeading } from '../..\\components\\Typography\\SecondaryHeading.vue'
+export { default as UserInterfaceModeButton } from '../..\\components\\UserInterface\\ModeButton.vue'
+export { default as UserInterfaceScrollButton } from '../..\\components\\UserInterface\\ScrollButton.vue'
+export { default as UserInterfaceSocialButton } from '../..\\components\\UserInterface\\SocialButton.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -56,11 +56,17 @@ export default {
 </script>
 
 <style scoped>
+.sections::-webkit-scrollbar {
+  display: none;
+}
+
 .sections {
   scroll-snap-type: y;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
 }
+
 
 .about {
   height: 90vh;
