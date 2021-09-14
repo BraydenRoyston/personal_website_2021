@@ -1,4 +1,7 @@
 {
+  "LayoutLoader": {
+    "description": "Auto imported from components/Layout/Loader.vue"
+  },
   "LayoutNavBar": {
     "description": "Auto imported from components/Layout/NavBar.vue"
   },
@@ -26,15 +29,6 @@
   "SectionsPortfolioSection": {
     "description": "Auto imported from components/Sections/PortfolioSection.vue"
   },
-  "TypographyDynamicHeading": {
-    "description": "Auto imported from components/Typography/DynamicHeading.vue"
-  },
-  "TypographyPrimaryHeading": {
-    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
-  },
-  "TypographySecondaryHeading": {
-    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
-  },
   "UserInterfaceModeButton": {
     "description": "Auto imported from components/UserInterface/ModeButton.vue"
   },
@@ -43,5 +37,14 @@
   },
   "UserInterfaceSocialButton": {
     "description": "Auto imported from components/UserInterface/SocialButton.vue"
+  },
+  "TypographyDynamicHeading": {
+    "description": "Auto imported from components/Typography/DynamicHeading.vue"
+  },
+  "TypographyPrimaryHeading": {
+    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
+  },
+  "TypographySecondaryHeading": {
+    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
   }
 }

@@ -1,5 +1,8 @@
 <template>
   <div :class="mode">
+    <transition v-if="!loaded" name="loader">
+      <Loader class="loader"/>
+    </transition>
     <NavBar :top="atTop"/>
     <Nuxt/>
   </div>
@@ -7,10 +10,12 @@
 
 <script>
 import NavBar from '../components/Layout/NavBar.vue';
+import Loader from '../components/Layout/Loader.vue';
 
 export default {
   components: {
     NavBar,
+    Loader,
   },
   data() {
     return {
@@ -36,6 +41,9 @@ export default {
       } else {
         return "darkMode";
       }
+    },
+    loaded() {
+      return this.$store.state.loaded;
     }
   },
   created() {
@@ -102,10 +110,21 @@ export default {
   --text: var(--platinum);
   --nav: var(--dark-nav-spacer);
   --navSpacer: var(--dark-nav-spacer);
+
+  position: absolute;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.loader-enter-active, .loader-leave-active {
+  transition: opacity 1s;
+  position: absolute;
+}
+.loader-enter, .loader-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  position: absolute;
 }
 </style>

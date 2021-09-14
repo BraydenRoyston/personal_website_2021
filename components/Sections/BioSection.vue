@@ -70,7 +70,7 @@ export default {
     display: flex;
     flex-direction: var(--dynamic-flex);
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .picture {
@@ -95,12 +95,9 @@ export default {
     align-items: center;
 }
 
-
-
-
 .parentSpacer {
     height: 100%;
-    width: 10vw;
+    width: 20vw;
 }
 
 .bioInformation {

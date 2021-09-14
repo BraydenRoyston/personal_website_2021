@@ -29,6 +29,9 @@ export default {
       topSpacerObserver: null,
     }
   },
+  mounted() {
+    this.$store.dispatch('pageIsLoaded');
+  },
   methods: {
     onIntersectionChange(entries) {
       entries.forEach(({ target, isIntersecting}) => {
@@ -65,6 +68,8 @@ export default {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
+  position: fixed;
+  top: 0;
 }
 
 
