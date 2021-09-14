@@ -29,9 +29,6 @@ export default {
       topSpacerObserver: null,
     }
   },
-  mounted() {
-    this.$store.dispatch('pageIsLoaded');
-  },
   methods: {
     onIntersectionChange(entries) {
       entries.forEach(({ target, isIntersecting}) => {

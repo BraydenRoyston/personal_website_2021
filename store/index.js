@@ -432,19 +432,8 @@ export const state = () => ({
     ]
 });
 
-export const actions = {
-  pageIsLoaded(context) {
-    setTimeout(function () {
-        context.commit('setLoaded');
-    }, 2000)
-  }
-}
-
 export const mutations = {
     changeMode(state) {
       state.dark = !state.dark;
     },
-    setLoaded(state) {
-        state.loaded = true;
-    }
   }
