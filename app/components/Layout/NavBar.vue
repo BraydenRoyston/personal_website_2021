@@ -64,7 +64,7 @@ export default {
     transition: background-color 1s ease, color 1s ease;
     height: 10vh;
     background: var(--background);
-    z-index: 100;
+    z-index: 200;
 }
 
 .bodyNav {

@@ -126,7 +126,7 @@ p {
     color: var(--text);
     background: var(--primary);
     transition: color 1s ease, background-color 1s ease;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
 }
 

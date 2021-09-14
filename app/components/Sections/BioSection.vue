@@ -3,22 +3,7 @@
         <div class="parentSpacer"></div>
         <div class="contactInformation">
             <div class="picture"></div>
-            <div class="socials">
-                <SocialButton
-                    :link="github"
-                    icon="mdi-linkedin"
-                />
-                <div class="spacer"></div>
-                <SocialButton 
-                    :link="linkedin"
-                    icon="mdi-github"
-                />
-                <div class="spacer"></div>
-                <SocialButton 
-                    :link="email"
-                    icon="mdi-email"
-                />
-            </div>
+            <SocialRow />
         </div>
         
         <div class="bioInformation">
@@ -45,21 +30,17 @@
 <script>
 import PrimaryHeading from '../Typography/PrimaryHeading.vue';
 import DynamicHeading from '../Typography/DynamicHeading.vue';
-import SocialButton from '../UserInterface/SocialButton.vue';
-
+import SocialRow from '../Layout/SocialRow.vue';
 
 export default {
     components: {
         PrimaryHeading,
         DynamicHeading,
-        SocialButton,
+        SocialRow,
     },
     data() {
         return {
             title: "Who am I?",
-            linkedin: "https://linkedin.com/braydenr",
-            github: "https://github.com/BraydenRoyston",
-            email: "mailto:brayden.royston10@gmail.com",
         }
     },
     computed: {
@@ -113,17 +94,8 @@ export default {
     align-items: center;
 }
 
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.spacer {
-    height: 10px;
-    width: 10px;
-}
+
 
 .parentSpacer {
     height: 100%;

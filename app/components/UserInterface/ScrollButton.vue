@@ -1,5 +1,5 @@
 <template>
-    <a href="#bio" class="circle">
+    <a href="#bio">
         <v-icon size="40" color="var(--highlight)" class="icon1">mdi-chevron-down</v-icon>
     </a>
 </template>

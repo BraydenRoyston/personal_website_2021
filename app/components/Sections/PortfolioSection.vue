@@ -1,69 +1,78 @@
 <template>
     <!-- NOTE for the kind folks snooping around - had to rush this out, modularization is coming soon -->
-    <div class="bio" :class="waveType">
-        <div class="filtersWrapper">
-            <h1>What do you care about?</h1>
-            <h3>Click the filters below to check out my experiences that relate to your interests!</h3>
-            <div class="options">
-                <div class="softwareOptions">
-                    <button class="option" :class="softwareActive" @click="switchFilter('Software')">
-                        Software
-                    </button>
-                    <div class="softwareTopics">
-                        <button class="option" :class="webDevActive" @click="switchFilter('WebDev')">
-                            WebDev
+    <div>
+        <div class="bio" :class="waveType">
+            <div class="filtersWrapper">
+                <h1>What do you care about?</h1>
+                <h3>Click the filters below to check out my experiences that relate to your interests!</h3>
+                <div class="options">
+                    <div class="softwareOptions">
+                        <button class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
+                            Software
                         </button>
-                        <button class="option" :class="mobileDevActive" @click="switchFilter('MobileDev')">
-                            MobileDev
-                        </button>
-                        <button class="option" :class="finTechActive" @click="switchFilter('FinTech')">
-                            FinTech
-                        </button>
+                        <!-- v-if="showSoftwareOptions" -->
+                        <div class="softwareTopics">
+                            <button class="option" :class="webDevActive" @click="switchFilter('WebDev')">
+                                WebDev
+                            </button>
+                            <button class="option" :class="mobileDevActive" @click="switchFilter('MobileDev')">
+                                MobileDev
+                            </button>
+                            <button class="option" :class="finTechActive" @click="switchFilter('FinTech')">
+                                FinTech
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="optionsSpacer"></div>
-                <div class="businessOptions">
-                    <button class="option" :class="businessActive" @click="switchFilter('Business')">
-                        Business
-                    </button>
-                    <div class="businessTopics">
-                        <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
-                            Consulting
+                    <div class="optionsSpacer"></div>
+                    <div class="businessOptions">
+                        <button class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
+                            Business
                         </button>
-                        <button class="option" :class="financeActive" @click="switchFilter('Finance')">
-                            Finance
-                        </button>
+                        <div class="businessTopics">
+                            <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
+                                Consulting
+                            </button>
+                            <button class="option" :class="financeActive" @click="switchFilter('Finance')">
+                                Finance
+                            </button>
+                        </div>
                     </div>
+                    
                 </div>
-                
             </div>
-        </div>
-        <p v-for="item in filters" :key="item">{{ item }}</p>
-        <div class="cellWrapper">
-            <div class="spacer"></div>
-            <transition-group tag="ul" name="project-list">
-                <PortfolioCell
-                    v-for="project in liveProjects"
-                    :key="project.key"
-                    :title="project.title"
-                    :links="project.links"
-                    :description="project.description"
-                    :techStack="project.techStack"
-                    :tags="project.tags"
-                />
-            </transition-group>
-            
-            <div class="spacer"></div>
+            <p v-for="item in filters" :key="item">{{ item }}</p>
+            <div class="cellWrapper">
+                <div class="spacer"></div>
+                <transition-group tag="ul" name="project-list" id="ul-projects">
+                    <PortfolioCell
+                        v-for="project in liveProjects"
+                        :key="project.key"
+                        :title="project.title"
+                        :links="project.links"
+                        :description="project.description"
+                        :techStack="project.techStack"
+                        :tags="project.tags"
+                    />
+                </transition-group>
+                <div class="bottomWave" :class="bottomWaveType"></div>
+                <NavSpacer />
+                <FooterSection />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import PortfolioCell from '../Layout/PortfolioCell.vue';
+import NavSpacer from '../Layout/NavSpacer.vue';
+import FooterSection from './FooterSection.vue';
+
 
 export default {
     components: {
         PortfolioCell,
+        NavSpacer,
+        FooterSection,
     },
     data() {
         return {
@@ -125,6 +134,9 @@ export default {
         }
     },
     computed: {
+        // showSoftwareOptions() {
+        //     return (this.Software == "Software");
+        // },
         dark() {
             return this.$store.state.dark
         },
@@ -133,6 +145,12 @@ export default {
                 return "waveDivider";
             }
             return "waveDividerDark";
+        },
+        bottomWaveType() {
+            if (!this.dark) {
+                return "";
+            }
+            return "bottomWaveDark";
         },
         liveProjects() {
             const new_projects = this.projects.filter(this.filterProjects);
@@ -225,6 +243,8 @@ export default {
   color: var(--text);
   text-align: center;
 
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,6 +258,7 @@ export default {
 
 .filtersWrapper {
     margin-top: 15vh;
+    z-index: 10;
 }
 
 .options {
@@ -299,10 +320,14 @@ button {
     transition: background-color 1s ease;
 }
 
+#big {
+    padding: 10px 15px 10px 15px;
+    font-size: var(--fs-small);
+}
+
 .button-active {
     background-color: var(--primary);
 }
-
 
 h1 {
     font-size: var(--fs-medium);
@@ -345,6 +370,36 @@ h3 {
   transition: transform 1s ease;
 }
 
+#ul-projects {
+    z-index: 100;
+}
+
+.bottomWave {
+    width: 100%;
+    height: 100vh;
+    margin-top: -60vh;
+    z-index: 0 !important;
+
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+
+    background-image: url('../../assets/wave1_light.svg');
+    transition: background-image 1s ease;
+}
+
+.bottomWaveDark {
+    width: 100%;
+    height: 100vh;
+    margin-top: -60vh;
+    z-index: 0 !important;
+
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+
+    background-image: url('../../assets/wave1_dark.svg');
+}
 
 .waveDivider {
     /* aspect-ratio: 500/300; */
