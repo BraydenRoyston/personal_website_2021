@@ -258,6 +258,7 @@ export default {
 .bio {
     scroll-behavior: smooth;
     height: 95vh;
+    width: 100vh;
     background: var(--background);
     transition: background-color 1s ease, color 1s ease, background-image 1s ease;
     background-size: cover;

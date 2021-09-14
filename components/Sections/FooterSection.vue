@@ -43,17 +43,17 @@ export default {
 <style scoped>
 .footer {
     width: 100vw;
-  height: 90vh;
-  background: var(--background);
-  transition: background-color 1s ease, color 1s ease, background-image 1s ease ;
-  background-size: cover;
-  /* color: var(--text); */
-  text-align: center;
+    height: 90vh;
+    background: var(--background);
+    transition: background-color 1s ease, color 1s ease, background-image 1s ease ;
+    background-size: cover;
+    /* color: var(--text); */
+    text-align: center;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .exit {
