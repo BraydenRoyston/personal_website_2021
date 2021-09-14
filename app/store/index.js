@@ -2,81 +2,68 @@ export const state = () => ({
     dark: true,
     projects: [
       {
-        key: 0,
         title: "TD Lab - Fullstack Developer",
         links: [
           {
               title: "Website", 
               value: "https://tdlab.io",
-              key: 0,
           },
         ],
         description: [
           {
-              value: "Spearheaded development for a mobile application in the small business e-commerce space that aided 5 small businesses during the pandemic.",
+              value: "Spearheaded development for a mobile application in the small business e-commerce space that aided 5 small businesses during the pandemic. Utilized Flutter to create the iOS + Android app, and Firebase for the backend.",
               key: 0,
           },
           {
-              value: "Created a web application to allow TD customers to keep track of the carbon footprint and offset it accordingly.",
+              value: "Created a web application using VueJS to allow TD customers to keep track of the carbon footprint and offset it accordingly.",
               key: 1,
           },
         ],
         techStack: [
           {
-            key: 0,
             value: "Flutter",
           },
           {
-            key: 1,
             value: "Firebase"
           },
           {
-            key: 2,
             value: "VueJS"
           },
           {
-            key: 3,
             value: "ReactJS"
           },
 
         ],
         tags: [
             {
-              key: 0,
-              value: "Co-op"
+              value: "Internship"
             },
             {
-              key: 1,
               value: "Software"
             },
             {
-              key: 2,
               value: "WebDev"
             },
             {
-              key: 3,
               value: "MobileDev",
             },
             {
-              key: 2,
               value: "FinTech"
             }
 
         ],
       },
       {
-        key: 1,
         title: "Clove - Software Engineer",
         links: [
           {
               title: "Website", 
               value: "https://clove.eco",
-              key: 0,
           },
         ],
         description: [
           {
-              value: "One of the founding engineers for Clove, a start-up based in San Francisco with the goal of providing consumers and businesse with the ability to make informed, eco-friendly choices in the e-commerce space.",
+              value: "One of the founding engineers for Clove, a start-up based in San Francisco with the goal of providing consumers and businesses with the ability to make informed, eco-friendly choices in the e-commerce space.",
               key: 0,
           },
           {
@@ -86,38 +73,31 @@ export const state = () => ({
         ],
         techStack: [
           {
-            key: 0,
             value: "ReactJS",
           },
           {
-            key: 1,
             value: "NextJS"
           },
           {
-            key: 2,
             value: "Firebase"
           },
         ],
         tags: [
             {
-              key: 0,
               value: "Software"
             },
             {
-              key: 1,
               value: "WebDev"
             }
         ],
       },
       {
-        key: 2,
         title: "Freelance Web Development",
         links: [
-          // {
-          //     title: "Website", 
-          //     value: "https://braydenroyston.ca",
-          //     key: 0,
-          // },
+          {
+              title: "Website", 
+              value: "https://braydenroyston.ca",
+          },
         ],
         description: [
           {
@@ -131,33 +111,27 @@ export const state = () => ({
         ],
         techStack: [
           {
-            key: 0,
             value: "VueJS",
           },
           {
-            key: 1,
             value: "NuxtJS"
           },
         ],
         tags: [
             {
-              key: 0,
               value: "Software"
             },
             {
-              key: 1,
               value: "WebDev"
             }
         ],
       },
       {
-        key: 3,
         title: "The GoldenHack - Software Developer",
         links: [
           {
               title: "Website", 
               value: "https://thegoldenhack.ca",
-              key: 0,
           },
         ],
         description: [
@@ -176,33 +150,27 @@ export const state = () => ({
         ],
         techStack: [
           {
-            key: 0,
             value: "ReactJS",
           },
           {
-            key: 1,
             value: "Dynamo DB"
           },
         ],
         tags: [
             {
-              key: 0,
               value: "Software"
             },
             {
-              key: 0,
               value: "WebDev"
             }
         ],
       },
       {
-        key: 4,
         title: "JDCC Laurier - Digital Strategy Academic Delegate",
         links: [
           {
               title: "Website", 
               value: "https://cabsonline.ca/jdcc/",
-              key: 0,
           },
         ],
         description: [
@@ -221,23 +189,19 @@ export const state = () => ({
         ],
         tags: [
             {
-              key: 0,
               value: "Business",
             },
             {
-              key: 0,
               value: "Consulting",
             }
         ],
       },
       {
-        key: 5,
         title: "Innovapost - DevOps Consultant",
         links: [
           {
               title: "Website", 
               value: "https://innovapost.com",
-              key: 0,
           },
         ],
         description: [
@@ -249,40 +213,37 @@ export const state = () => ({
               value: "Created Bash scripts to automate tasks on virtual machines that controlled postal services via Azure.",
               key: 1,
           },
+          {
+            value: "Worked with Canada Post to diagnose technical issues that affected business operations and implemented software to solve said issues.",
+            key: 2,
+        },
         ],
         techStack: [
           {
-            key: 0,
             value: "Microsoft Azure",
           },
           {
-            key: 1,
             value: "Bash"
           },
         ],
         tags: [
             {
-              key: 0,
-              value: "Co-op"
+              value: "Internship"
             },
             {
-              key: 1,
               value: "Software"
             },
             {
-              key: 2,
               value: "Consulting"
             }
         ],
       },
       {
-        key: 6,
-        title: "To the Moon - Side Project",
+        title: "To the Moon",
         links: [
           {
               title: "DevPost", 
               value: "https://devpost.com/software/swingsentiment",
-              key: 0,
           },
         ],
         description: [
@@ -297,37 +258,33 @@ export const state = () => ({
         ],
         techStack: [
           {
-            key: 0,
             value: "ReactJS",
           },
         ],
         tags: [
             {
-              key: 0,
               value: "Hackathon"
             },
             {
-              key: 1,
               value: "Software"
             },
             {
-              key: 2,
+              value: "WebDev"
+            },
+            {
               value: "FinTech"
             },
             {
-              key: 3,
               value: "Finance"
             }
         ],
       },
       {
-        key: 7,
-        title: "UBank - Side Project",
+        title: "UBank",
         links: [
           {
               title: "DevPost", 
               value: "https://devpost.com/software/ubank-t2z9ws",
-              key: 0,
           },
         ],
         description: [
@@ -342,26 +299,132 @@ export const state = () => ({
         ],
         techStack: [
           {
-            key: 0,
             value: "ReactJS",
           },
         ],
         tags: [
             {
-              key: 0,
               value: "Hackathon"
             },
             {
-              key: 1,
               value: "Software"
             },
             {
-              key: 2,
               value: "FinTech"
             },
             {
-              key: 3,
               value: "Finance"
+            },
+            {
+              value: "WebDev"
+            },
+        ],
+      },
+      {
+        title: "Fidelity x Xlerate Lazardis Case Competition",
+        description: [
+          {
+              value: "Finished 1st out of 56 teams comprised of students from universities across Ontario, receiving a cash prize of $4000.",
+              key: 0,
+          },
+          {
+              value: "Developed hyper-personalized ETF's and an innovative marketing plan to increase millenial interest in saving their money with Fidelity.",
+              key: 1,
+          },
+          {
+            value: "Utilized skills in financial analysis to develop highly diversified ETF's base on emergin economies that met Fidelity's clients' needs.",
+            key: 2,
+          }
+        ],
+        tags: [
+            {
+              value: "Business",
+            },
+            {
+              value: "Consulting",
+            },
+            {
+              value: "Case Competition"
+            }
+        ],
+      },
+      {
+        title: "Microsoft x Laurier Marketing Association Case Competition",
+        description: [
+          {
+              value: "Finished 3rd out of 35 teams comprised of students from Wilfrid Laurier University and the University of Waterloo, receiving a cash prize of $200.",
+              key: 0,
+          },
+          {
+              value: "Developed a comprehensive marketing plan and financial analysis to aid in the launch of the Microsoft Teams Platform to university students.",
+              key: 1,
+          },
+        ],
+        tags: [
+            {
+              value: "Business",
+            },
+            {
+              value: "Consulting",
+            },
+            {
+              value: "Case Competition"
+            }
+        ],
+      },
+      {
+        title: "HP Live Case Competition",
+        description: [
+          {
+              value: "Finished 2nd out of 300 teams comprised of Wilfrid Laurier's BBA class of 2024, receiving a cash prize of $2600.",
+              key: 0,
+          },
+          {
+              value: "Developed a strategy for \"SmartFax\", an IOT product that allows one to \"smart-fax\" anyone from anywhere, increasing HP's Gen-Z customer base.",
+              key: 1,
+          },
+          {
+            value: "Conducted a financial analysis that quantified the 5-year cash as a result of the implementation of this product.",
+            key: 2,
+        },
+        ],
+        tags: [
+            {
+              value: "Business",
+            },
+            {
+              value: "Consulting",
+            },
+            {
+              value: "Case Competition"
+            }
+        ],
+      },
+      {
+        title: "LazICC Local x Foreseters Financial Case Competition",
+        description: [
+          {
+              value: "Finished 2nd out of 35 teams comprised of Laurier BBA students, receiving a $250 cash prize.",
+              key: 0,
+          },
+          {
+              value: "Developed a strategy for \"Dr. O\", an interactive ChatBot mobile application that allowed Foresters Financial to encourage healthy lifestyles in all clients.",
+              key: 1,
+          },
+          {
+            value: "Worked on the UX design of our mobile application and go-to-market plan for the implementation of our strategy.",
+            key: 2,
+        },
+        ],
+        tags: [
+            {
+              value: "Business",
+            },
+            {
+              value: "Consulting",
+            },
+            {
+              value: "Case Competition"
             }
         ],
       },

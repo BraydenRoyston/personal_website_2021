@@ -1,12 +1,12 @@
 <template>
     <div class="socials">
         <SocialButton
-            :link="github"
+            :link="linkedin"
             icon="mdi-linkedin"
         />
         <div class="spacer"></div>
         <SocialButton 
-            :link="linkedin"
+            :link="github"
             icon="mdi-github"
         />
         <div class="spacer"></div>
@@ -26,7 +26,7 @@ export default {
     },
     data() {
         return {
-            linkedin: "https://linkedin.com/braydenr",
+            linkedin: "https://linkedin.com/in/braydenr",
             github: "https://github.com/BraydenRoyston",
             email: "mailto:brayden.royston10@gmail.com",
         }

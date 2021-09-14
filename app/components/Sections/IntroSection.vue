@@ -58,17 +58,18 @@ export default {
 
 <style scoped>
 .intro {
-  height: 90vh;
-  transition: background-color 1s ease, color 1s ease, background-image 1s ease;
-  background: var(--background);
-  background-size: cover;
-  /* color: var(--text); */
-  text-align: center;
+    scroll-behavior: smooth;
+    height: 90vh;
+    transition: background-color 1s ease, color 1s ease, background-image 1s ease;
+    background: var(--background);
+    background-size: cover;
+    /* color: var(--text); */
+    text-align: center;
 
-  display: flex;
-  flex-direction: var(--dynamic-flex);
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: var(--dynamic-flex);
+    align-items: center;
+    justify-content: center;
 }
 
 .intro * {

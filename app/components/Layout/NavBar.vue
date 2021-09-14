@@ -10,7 +10,7 @@
             <ul class="nav-items">
                 <li><a href="#intro" class="nav-link">Home</a></li>
                 <li><a href="#bio" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">My Stuff</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li class="switch-list-item">
                   <ModeButton/>
                 </li>

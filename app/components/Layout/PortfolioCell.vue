@@ -5,7 +5,7 @@
                 <h2>{{ title }}</h2>
             </div>
             <div class="links">
-                <a v-for="link in links" :key="link.key" :href="link.value" target="_blank">
+                <a v-for="link in links" :key="link.title" :href="link.value" target="_blank">
                     {{ link.title }}
                 </a>
             </div>
@@ -15,12 +15,12 @@
         </div>
         <div class="footer">
             <div class="techStack">
-                <p v-for="tech in techStack" :key="tech.key">
+                <p v-for="tech in techStack" :key="tech.value">
                     {{ tech.value }}
                 </p>
             </div>
             <div class="tags">
-                <p v-for="tag in tags" :key="tag.key" id="tag">
+                <p v-for="tag in tags" :key="tag.value" id="tag">
                     {{ tag.value }}
                 </p>
             </div>
@@ -33,23 +33,23 @@ export default {
     props: {
         title: {
             type: String,
-            required: true,
+            required: false,
         },
         links: {
             type: Array,
-            required: true,
+            required: false,
         },
         description: {
             type: Array,
-            required: true,
+            required: false,
         },
         techStack: {
             type: Array,
-            required: true,
+            required: false,
         },
         tags: {
             type: Array,
-            required: true,
+            required: false,
         }
     }
 }
@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 .cellWrapper {
-    width: 75vw !important;
+    width: 83vw !important;
     height: 250px;
 
     /* background: white; */
@@ -106,7 +106,7 @@ a {
 
 h3 {
     text-align: left;
-    font-size: var(--fs-extra-small);
+    font-size: var(--fs-small);
     color: var(--text);
     transition: color 1s ease;
     padding-top: 5px;
@@ -140,7 +140,7 @@ p {
     margin-right: 0px;
     margin-left: 10px;
     background: var(--primary);
-    transition: background-color 1s ease;
+    transition: background-color 1s ease, color 1s ease;
 }
 
 .footer {
@@ -153,5 +153,19 @@ p {
     justify-content: space-between;
     align-items: flex-start;
     /* background: red; */
+}
+
+@media screen and (max-width: 1000px) {
+    .cellWrapper {
+        width: 95vw !important;
+    }
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #tag {
+        margin: 7px;
+    }
 }
 </style>

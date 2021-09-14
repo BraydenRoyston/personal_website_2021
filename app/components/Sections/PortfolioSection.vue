@@ -1,5 +1,6 @@
 <template>
     <!-- NOTE for the kind folks snooping around - had to rush this out, modularization is coming soon -->
+    <!-- good luck reading this, i apologize in advance ;-; -->
     <div>
         <div class="bio" :class="waveType">
             <div class="filtersWrapper">
@@ -10,43 +11,55 @@
                         <button class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
                             Software
                         </button>
-                        <!-- v-if="showSoftwareOptions" -->
-                        <div class="softwareTopics">
-                            <button class="option" :class="webDevActive" @click="switchFilter('WebDev')">
-                                WebDev
-                            </button>
-                            <button class="option" :class="mobileDevActive" @click="switchFilter('MobileDev')">
-                                MobileDev
-                            </button>
-                            <button class="option" :class="finTechActive" @click="switchFilter('FinTech')">
-                                FinTech
-                            </button>
-                        </div>
+                        <transition name="softwareTopicsTransition" v-if="showSoftwareOptions" appear>
+                            <div class="softwareTopics">
+                                <button class="option" :class="InternshipActive" @click="switchFilter('Internship')">
+                                    Internships
+                                </button>
+                                <button class="option" :class="webDevActive" @click="switchFilter('WebDev')">
+                                    WebDev
+                                </button>
+                                <button class="option" :class="mobileDevActive" @click="switchFilter('MobileDev')">
+                                    MobileDev
+                                </button>
+                                <button class="option" :class="finTechActive" @click="switchFilter('FinTech')">
+                                    FinTech
+                                </button>
+                                <button class="option" :class="hackathonActive" @click="switchFilter('Hackathon')">
+                                    Hackathons
+                                </button>
+                            </div>
+                        </transition>
+                        
                     </div>
                     <div class="optionsSpacer"></div>
                     <div class="businessOptions">
                         <button class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
                             Business
                         </button>
-                        <div class="businessTopics">
-                            <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
-                                Consulting
-                            </button>
-                            <button class="option" :class="financeActive" @click="switchFilter('Finance')">
-                                Finance
-                            </button>
-                        </div>
+                        <transition name="businessTopicsTransition" v-if="showBusinessOptions" appear>
+                            <div class="businessTopics">
+                                <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
+                                    Consulting
+                                </button>
+                                <button class="option" :class="financeActive" @click="switchFilter('Finance')">
+                                    Finance
+                                </button>
+                                <button class="option" :class="caseCompetitionActive" @click="switchFilter('CaseCompetition')">
+                                    Case Competitions
+                                </button>
+                            </div>
+                        </transition>
                     </div>
                     
                 </div>
             </div>
-            <p v-for="item in filters" :key="item">{{ item }}</p>
+            <div class="filtersSpacerCells"></div>
             <div class="cellWrapper">
-                <div class="spacer"></div>
-                <transition-group tag="ul" name="project-list" id="ul-projects">
+                <transition-group tag="ul" name="project-list" id="ul-projects" appear>
                     <PortfolioCell
                         v-for="project in liveProjects"
-                        :key="project.key"
+                        :key="project.title"
                         :title="project.title"
                         :links="project.links"
                         :description="project.description"
@@ -76,13 +89,16 @@ export default {
     },
     data() {
         return {
-            Software: "Software",
-            Business: "Business",
-            WebDev: "WebDev",
-            MobileDev: "MobileDev",
-            FinTech: "FinTech",
-            Finance: "Finance",
-            Consulting: "Consulting",
+            Software: "",
+            Business: "",
+            Internship: "",
+            WebDev: "",
+            MobileDev: "",
+            FinTech: "",
+            Hackathon: "",
+            Finance: "",
+            Consulting: "",
+            CaseCompetition: "",
             projects: this.$store.state.projects,
         }
     },
@@ -93,18 +109,24 @@ export default {
                     this["WebDev"] = "";
                     this["MobileDev"] = "";
                     this["FinTech"] = "";
+                    this["Internship"] = "";
+                    this["Hackathon"] = "";
                 } else {
                     this["WebDev"] = "WebDev";
                     this["MobileDev"] = "MobileDev";
                     this["FinTech"] = "FinTech";
+                    this["Internship"] = "Internship";
+                    this["Hackathon"] = "Hackathon";
                 }
             } else if (filter == "Business") {
                 if (this[filter] == "Business") {
                     this["Finance"] = "";
                     this["Consulting"] = "";
+                    this["CaseCompetition"] = "";
                 } else {
                     this["Finance"] = "Finance";
                     this["Consulting"] = "Consulting";
+                    this["CaseCompetition"] = "Case Competition";
                 }
             }
             if (this[filter] == "") {
@@ -112,20 +134,31 @@ export default {
             } else {
                 this[filter] = "";
             }
+            if (this["WebDev"] == "" &&
+                this["MobileDev"] == "" &&
+                this["FinTech"] == "" &&
+                this["Internship"] == "" &&
+                this["Hackathon"] == "") {
+                    this["Software"] = "";
+            }
+            if (this["Finance"] == "" &&
+                this["Consulting"] == "" &&
+                this["CaseCompetition"] == "") {
+                    this["Business"] = "";
+            }
         },
         filterProjects(project) {
-            console.log(project.title);
             for (var i = 0; i < project.tags.length; i++) {
                 const current_tag = project.tags[i].value;
-                console.log(current_tag);
                 if (
-                    current_tag == this.Software ||
-                    current_tag == this.Business ||
+                    current_tag == this.Internship ||
                     current_tag == this.WebDev ||
                     current_tag == this.MobileDev ||
                     current_tag == this.FinTech ||
+                    current_tag == this.Hackathon ||
                     current_tag == this.Finance ||
-                    current_tag == this.Consulting
+                    current_tag == this.Consulting ||
+                    current_tag == this.CaseCompetition
                 ) {
                     return true;
                 }
@@ -134,9 +167,6 @@ export default {
         }
     },
     computed: {
-        // showSoftwareOptions() {
-        //     return (this.Software == "Software");
-        // },
         dark() {
             return this.$store.state.dark
         },
@@ -152,41 +182,14 @@ export default {
             }
             return "bottomWaveDark";
         },
+        showSoftwareOptions() {
+            return (this.Software == "Software");
+        },
+        showBusinessOptions() {
+            return (this.Business == "Business");
+        },
         liveProjects() {
-            const new_projects = this.projects.filter(this.filterProjects);
-            if (new_projects.length == 0) {
-                return [
-                    {
-                        key: 0,
-                        title: "Extremely Out of Scope Project",
-                        links: [
-                        {
-                            title: "Website", 
-                            value: "http://papertoilet.com/",
-                            key: 0,
-                        },
-                        ],
-                        description: [
-                        {
-                            value: "It seems the intersection of your interests and my experiences is the empty set ;(",
-                            key: 0,
-                        },
-                        {
-                            value: "Unfortunately in the short term there's not much I can do here, consider being a bit more generous with the filters or feel free to check back in the future and see what I've gotten up to! :D",
-                            key: 1,
-                        },
-                        ],
-                        tags: [
-                            {
-                            key: 0,
-                            value: "Software",
-                            },
-                        ],
-                    }
-                ];
-            } else {
-                return new_projects;
-            }
+            return this.projects.filter(this.filterProjects);
         },
         softwareActive() {
             if (this.Software == "") {
@@ -196,7 +199,13 @@ export default {
         },
         businessActive() {
             if (this.Business == "") {
-                return ""
+                return "";
+            }
+            return "button-active";
+        },
+        InternshipActive() {
+            if (this.Internship == "") {
+                return "";
             }
             return "button-active";
         },
@@ -218,6 +227,12 @@ export default {
             }
             return "button-active";
         },
+        hackathonActive() {
+            if (this.Hackathon == "") {
+                return "";
+            }
+            return "button-active";
+        },
         consultingActive() {
             if (this.Consulting == "") {
                 return ""
@@ -230,25 +245,32 @@ export default {
             }
             return "button-active";
         },
+        caseCompetitionActive() {
+            if (this.CaseCompetition == "") {
+                return "";
+            }
+            return "button-active";
+        },
     }
 }
 </script>
 
 <style scoped>
 .bio {
-  height: 90vh;
-  background: var(--background);
-  transition: background-color 1s ease, color 1s ease, background-image 1s ease;
-  background-size: cover;
-  color: var(--text);
-  text-align: center;
+    scroll-behavior: smooth;
+    height: 95vh;
+    background: var(--background);
+    transition: background-color 1s ease, color 1s ease, background-image 1s ease;
+    background-size: cover;
+    color: var(--text);
+    text-align: center;
 
-  z-index: 1;
+    z-index: 1;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .spacer {
@@ -258,49 +280,59 @@ export default {
 
 .filtersWrapper {
     margin-top: 15vh;
+    width: 100%;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .options {
+    height: 15vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .softwareOptions {
-    width: 45%;
+    height: inherit;
+    width: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
 }
 
 .softwareTopics {
-    width: 45%;
+    width: 90%;
     
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
     justify-content: flex-end;
     align-items: center;
 }
 
 .optionsSpacer {
     width: 10%;
-    height: 100px;
-    border-right: 2px solid var(--highlight);
-    border-left: 2px solid var(--highlight);
+    height: inherit;
+    /* border-right: 2px solid var(--highlight); */
+    /* border-left: 2px solid var(--highlight); */
 }
 
 .businessOptions {
-    width: 50%;
+    height: inherit;
+    width: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
 .businessTopics {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -308,6 +340,7 @@ export default {
 }
 
 button {
+    white-space: nowrap;
     background: transparent;
     border-radius: 100px;
     border: 1px solid var(--text);
@@ -317,7 +350,7 @@ button {
 
     font-size: var(--fs-extra-small);
 
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 #big {
@@ -343,8 +376,7 @@ h3 {
 
 .cellWrapper {
     width: 100vw;
-
-    /* position: absolute; */
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,6 +405,14 @@ h3 {
 #ul-projects {
     z-index: 100;
 }
+.softwareTopicsTransition-enter-active, .softwareTopicsTransition-leave-active,
+.businessTopicsTransition-enter-active, .businessTopicsTransition-leave-active{
+  transition: opacity 1s;
+}
+.softwareTopicsTransition-enter, .softwareTopicsTransition-leave-to,
+.businessTopicsTransition-enter, .businessTopicsTransition-leave-to  {
+  opacity: 0;
+}
 
 .bottomWave {
     width: 100%;
@@ -385,7 +425,7 @@ h3 {
     background-repeat: no-repeat;
 
     background-image: url('../../assets/wave1_light.svg');
-    transition: background-image 1s ease;
+    transition: all 1s ease !important;
 }
 
 .bottomWaveDark {
@@ -399,10 +439,10 @@ h3 {
     background-repeat: no-repeat;
 
     background-image: url('../../assets/wave1_dark.svg');
+    transition: all 1s ease !important;
 }
 
 .waveDivider {
-    /* aspect-ratio: 500/300; */
     width: 100%;
     
     background-size: cover;
@@ -418,7 +458,26 @@ h3 {
 
 @media screen and (max-width: 1000px) {
     .cellWrapper {
-        width: 95vw;
+        width: 100vw;
+    }
+    button {
+        z-index: 1000 !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .softwareTopics {
+        flex-wrap: wrap;
+    }
+    .businessTopics {
+        flex-wrap: wrap;
+    }
+    .filtersSpacerCells {
+        height: 200px;
+        width: 100%;
+    }
+    .cellWrapper {
+        margin-top: 10vh;
     }
 }
 </style>

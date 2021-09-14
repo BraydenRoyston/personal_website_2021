@@ -14,18 +14,6 @@
   "LayoutTopSpacer": {
     "description": "Auto imported from components/Layout/TopSpacer.vue"
   },
-  "SectionsBioSection": {
-    "description": "Auto imported from components/Sections/BioSection.vue"
-  },
-  "SectionsFooterSection": {
-    "description": "Auto imported from components/Sections/FooterSection.vue"
-  },
-  "SectionsIntroSection": {
-    "description": "Auto imported from components/Sections/IntroSection.vue"
-  },
-  "SectionsPortfolioSection": {
-    "description": "Auto imported from components/Sections/PortfolioSection.vue"
-  },
   "UserInterfaceModeButton": {
     "description": "Auto imported from components/UserInterface/ModeButton.vue"
   },
@@ -43,5 +31,17 @@
   },
   "TypographySecondaryHeading": {
     "description": "Auto imported from components/Typography/SecondaryHeading.vue"
+  },
+  "SectionsBioSection": {
+    "description": "Auto imported from components/Sections/BioSection.vue"
+  },
+  "SectionsFooterSection": {
+    "description": "Auto imported from components/Sections/FooterSection.vue"
+  },
+  "SectionsIntroSection": {
+    "description": "Auto imported from components/Sections/IntroSection.vue"
+  },
+  "SectionsPortfolioSection": {
+    "description": "Auto imported from components/Sections/PortfolioSection.vue"
   }
 }

@@ -63,7 +63,7 @@ export default {
     align-items: center;
 
     width: 30%;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 h1 {

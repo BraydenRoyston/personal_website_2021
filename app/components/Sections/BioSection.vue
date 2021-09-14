@@ -59,17 +59,18 @@ export default {
 
 <style scoped>
 .bio {
-  height: 90vh;
-  transition: background-color 1s ease, color 1s ease, background-image 1s ease;
-  background: var(--background);
-  background-size: cover;
-  color: var(--text);
-  text-align: center;
+    scroll-behavior: smooth;
+    height: 90vh;
+    transition: background-color 1s ease, color 1s ease, background-image 1s ease;
+    background: var(--background);
+    background-size: cover;
+    color: var(--text);
+    text-align: center;
 
-  display: flex;
-  flex-direction: var(--dynamic-flex);
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: var(--dynamic-flex);
+    align-items: center;
+    justify-content: space-around;
 }
 
 .picture {
@@ -111,7 +112,7 @@ export default {
 
 .introduction {
     width: 75%;
-    font-size: var(--fs-extra-small);
+    font-size: var(--fs-small);
 }
 
 span {
