@@ -1,8 +1,5 @@
 <template>
   <div :class="mode">
-    <transition v-if="!loaded" name="loader">
-      <Loader class="loader"/>
-    </transition>
     <NavBar :top="atTop"/>
     <Nuxt/>
   </div>
@@ -10,12 +7,10 @@
 
 <script>
 import NavBar from '../components/Layout/NavBar.vue';
-import Loader from '../components/Layout/Loader.vue';
 
 export default {
   components: {
     NavBar,
-    Loader,
   },
   data() {
     return {
