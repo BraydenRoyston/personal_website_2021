@@ -77,6 +77,10 @@ export default {
     align-items: center;
 }
 
+.logoWrapper div, .logoWrapper p {
+    transition: all 1s ease;
+}
+
 .logoWrapper:hover p {
     color: var(--highlight);
     cursor: default;

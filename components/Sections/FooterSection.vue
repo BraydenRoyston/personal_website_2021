@@ -75,7 +75,6 @@ h1 {
 h3 {
     color: var(--text);
     font-size: var(--fs-medium);
-
     transition: color 1s ease;
 }
 
