@@ -99,10 +99,10 @@ export default {
     justify-content: center;
 }
 
-.intro * {
+/* .intro * {
     margin-top: 5px;
     margin-bottom: 5px;
-}
+} */
 
 .logo {
     height: 60vh;
@@ -132,15 +132,18 @@ export default {
 }
 
 @media screen and (max-width: 725px) {
-  .logo {
-      margin-bottom: 0;
-      height: 40vh;
-      width: auto;
-  }
-  .introductionText {
-      width: 80vw;
-      height: 40vh;
-  }
+    .logo {
+        margin-bottom: 0;
+        height: 40vh;
+        width: auto;
+    }
+    .introductionText {
+        width: 80vw;
+        height: 40vh;
+    }
+    svg {
+        height: 10vh;
+    }
 }
 
 .waveDivider {
@@ -155,6 +158,10 @@ export default {
 
 .waveDividerDark {
     background-image: url('../../assets/wave1_dark.svg');
+}
+
+svg {
+    height: 15vh;
 }
 
 svg text {
