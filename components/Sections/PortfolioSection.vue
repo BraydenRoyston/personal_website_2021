@@ -2,16 +2,17 @@
     <!-- NOTE for the kind folks snooping around - had to rush this out, modularization is coming soon -->
     <!-- good luck reading this, i apologize in advance ;-; -->
     <div>
-        <div class="bio" :class="waveType">
+        <div class="portfolio" :class="waveType">
             <div class="filtersWrapper">
                 <h1>What do you care about?</h1>
                 <h3>Click the filters below to check out my experiences that relate to your interests!</h3>
                 <div class="options">
                     <div class="softwareOptions">
-                        <button class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
-                            Software
-                        </button>
-                        <transition name="softwareTopicsTransition" v-if="showSoftwareOptions" appear>
+                        <div class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
+                            Software Topics
+                        </div>
+                        <!-- v-if="showSoftwareOptions"  -->
+                        <transition name="softwareTopicsTransition" appear>
                             <div class="softwareTopics">
                                 <button class="option" :class="InternshipActive" @click="switchFilter('Internship')">
                                     Internships
@@ -34,10 +35,11 @@
                     </div>
                     <div class="optionsSpacer"></div>
                     <div class="businessOptions">
-                        <button class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
-                            Business
-                        </button>
-                        <transition name="businessTopicsTransition" v-if="showBusinessOptions" appear>
+                        <div class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
+                            Business Topics
+                        </div>
+                        <!-- v-if="showBusinessOptions" -->
+                        <transition name="businessTopicsTransition"  appear>
                             <div class="businessTopics">
                                 <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
                                     Consulting
@@ -54,7 +56,7 @@
                     
                 </div>
             </div>
-            <div class="cellWrapper">
+             <div class="cellWrapper">
                 <transition-group tag="ul" name="project-list" id="ul-projects" appear>
                     <PortfolioCell
                         v-for="project in liveProjects"
@@ -70,7 +72,8 @@
                 <NavSpacer />
                 <FooterSection />
             </div>
-        </div>
+            
+        </div>        
     </div>
 </template>
 
@@ -255,7 +258,7 @@ export default {
 </script>
 
 <style scoped>
-.bio {
+.portfolio {
     scroll-behavior: smooth;
     height: 95vh;
     width: 100vw;
@@ -356,6 +359,8 @@ button {
 #big {
     padding: 10px 15px 10px 15px;
     font-size: var(--fs-small);
+    color: var(--highlight);
+    transition: color 1s ease;
 }
 
 .button-active {
@@ -417,7 +422,7 @@ h3 {
 .bottomWave {
     width: 100%;
     height: 100vh;
-    margin-top: -60vh;
+    margin-top: -40vh;
     z-index: 0 !important;
 
     background-size: cover;
@@ -431,7 +436,7 @@ h3 {
 .bottomWaveDark {
     width: 100%;
     height: 100vh;
-    margin-top: -60vh;
+    margin-top: -40vh;
     z-index: 0 !important;
 
     background-size: cover;

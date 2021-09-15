@@ -17,24 +17,6 @@
   "LayoutTopSpacer": {
     "description": "Auto imported from components/Layout/TopSpacer.vue"
   },
-  "UserInterfaceModeButton": {
-    "description": "Auto imported from components/UserInterface/ModeButton.vue"
-  },
-  "UserInterfaceScrollButton": {
-    "description": "Auto imported from components/UserInterface/ScrollButton.vue"
-  },
-  "UserInterfaceSocialButton": {
-    "description": "Auto imported from components/UserInterface/SocialButton.vue"
-  },
-  "TypographyDynamicHeading": {
-    "description": "Auto imported from components/Typography/DynamicHeading.vue"
-  },
-  "TypographyPrimaryHeading": {
-    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
-  },
-  "TypographySecondaryHeading": {
-    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
-  },
   "SectionsBioSection": {
     "description": "Auto imported from components/Sections/BioSection.vue"
   },
@@ -46,5 +28,23 @@
   },
   "SectionsPortfolioSection": {
     "description": "Auto imported from components/Sections/PortfolioSection.vue"
+  },
+  "TypographyDynamicHeading": {
+    "description": "Auto imported from components/Typography/DynamicHeading.vue"
+  },
+  "TypographyPrimaryHeading": {
+    "description": "Auto imported from components/Typography/PrimaryHeading.vue"
+  },
+  "TypographySecondaryHeading": {
+    "description": "Auto imported from components/Typography/SecondaryHeading.vue"
+  },
+  "UserInterfaceModeButton": {
+    "description": "Auto imported from components/UserInterface/ModeButton.vue"
+  },
+  "UserInterfaceScrollButton": {
+    "description": "Auto imported from components/UserInterface/ScrollButton.vue"
+  },
+  "UserInterfaceSocialButton": {
+    "description": "Auto imported from components/UserInterface/SocialButton.vue"
   }
 }
