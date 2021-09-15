@@ -77,6 +77,15 @@ export default {
     align-items: center;
 }
 
+.logoWrapper:hover p {
+    color: var(--highlight);
+    cursor: default;
+}
+
+.logoWrapper:hover div {
+    background-image: var(--highlight-logo);
+}
+
 .logo {
     display: flex;
     align-items: center;

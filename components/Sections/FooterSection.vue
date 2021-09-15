@@ -61,7 +61,7 @@ export default {
     justify-content: center;
     align-items: center;
 
-    width: 30%;
+    width: 40%;
     margin-top: 10vh;
 }
 

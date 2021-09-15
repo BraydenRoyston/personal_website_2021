@@ -16,7 +16,7 @@
                 completing a <span>Bachelor of Computer Science</span> and <span>Bachelor of Business Administration</span> respectively. Great to meet you!
                 <br />
                 <br />
-                I just finished a co-op team as a <span>Fullstack Developer at TD Lab</span>, gaining valuable experience with
+                I just finished a co-op term as a <span>Fullstack Developer at TD Lab</span>, gaining valuable experience with
                 Flutter, Firebase, and VueJS. I'm currently on the hunt for an awesome job for the <span>Winter 2022 season!</span>
                 <br />
                 <br />

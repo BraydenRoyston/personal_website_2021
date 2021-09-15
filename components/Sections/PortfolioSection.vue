@@ -104,31 +104,6 @@ export default {
     },
     methods: {
         switchFilter(filter) {
-            // if (filter == "Software") {
-            //     if (this[filter] == "Software") {
-            //         this["WebDev"] = "";
-            //         this["MobileDev"] = "";
-            //         this["FinTech"] = "";
-            //         this["Internship"] = "";
-            //         this["Hackathon"] = "";
-            //     } else {
-            //         this["WebDev"] = "WebDev";
-            //         this["MobileDev"] = "MobileDev";
-            //         this["FinTech"] = "FinTech";
-            //         this["Internship"] = "Internship";
-            //         this["Hackathon"] = "Hackathon";
-            //     }
-            // } else if (filter == "Business") {
-            //     if (this[filter] == "Business") {
-            //         this["Finance"] = "";
-            //         this["Consulting"] = "";
-            //         this["CaseCompetition"] = "";
-            //     } else {
-            //         this["Finance"] = "Finance";
-            //         this["Consulting"] = "Consulting";
-            //         this["CaseCompetition"] = "Case Competition";
-            //     }
-            // }
             if (filter == "reset") {
                 this["WebDev"] = "";
                 this["MobileDev"] = "";
@@ -437,7 +412,7 @@ h3 {
 .bottomWave {
     width: 100%;
     height: 100vh;
-    margin-top: -40vh;
+    margin-top: -45vh;
     z-index: 0 !important;
 
     background-size: cover;
@@ -451,7 +426,7 @@ h3 {
 .bottomWaveDark {
     width: 100%;
     height: 100vh;
-    margin-top: -40vh;
+    margin-top: -45vh;
     z-index: 0 !important;
 
     background-size: cover;

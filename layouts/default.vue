@@ -88,6 +88,9 @@ export default {
   --dynamic-justify: space-around;
   --dynamic-flex: var(--non-mobile);
   --dynamic-flex-alternate: var(--mobile);
+
+  /* other assets */
+  --highlight-logo: url('../assets/logo/blue_clean.png');
 }
 
 @media screen and (max-width: 725px) {
@@ -105,6 +108,7 @@ export default {
   --text: var(--platinum);
   --nav: var(--dark-nav-spacer);
   --navSpacer: var(--dark-nav-spacer);
+  --highlight-logo: url('../assets/logo/mint_clean.png');
 
   position: absolute;
 }

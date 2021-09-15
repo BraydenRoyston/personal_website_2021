@@ -8,21 +8,16 @@
             <SecondaryHeading
                 :text="intro"
             />
-                <transition name="dynamicText" mode="out-in" appear>
-                    <!-- <DynamicHeading
-                        :text="dynamics[dynamicIndex]"
-                        :key="dynamicIndex"
-                    /> -->
-                    <svg width="100%" height="100%" key="dynamicIndex">
-                        <text x="50%" y="60%"  text-anchor="middle"  >
-                        {{ dynamics[dynamicIndex] }}
-                        </text>
-                    </svg>
-                </transition>
+            <transition name="dynamicText" mode="out-in" appear>
+                <svg width="100%" height="100%" key="dynamicIndex">
+                    <text x="50%" y="60%"  text-anchor="middle"  >
+                    {{ dynamics[dynamicIndex] }}
+                    </text>
+                </svg>
+            </transition>
             <SecondaryHeading 
                 :text="invitation"
             />
-            
             <ScrollButton />
         </div>
     </div>
@@ -50,10 +45,11 @@ export default {
           "love developing cool stuff.",
           "am a problem solver.",
           "learn quick.",
-          "am a fan of public speaking.",
-          "read some books.",
+          "am a student",
+          "enjoy public speaking.",
+          "read books.",
       ],
-      dynamicIndex: 0,
+      dynamicIndex: -1,
     }
   },
   created() {
@@ -61,7 +57,7 @@ export default {
   },
   methods: {
       changeDynamicText() {
-          if (this.dynamicIndex == 4) {
+          if (this.dynamicIndex == 5) {
               this.dynamicIndex = 0;
           } else {
               this.dynamicIndex++;
