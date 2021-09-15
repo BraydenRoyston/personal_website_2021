@@ -31,7 +31,6 @@
                                 </button>
                             </div>
                         </transition>
-                        
                     </div>
                     <div class="optionsSpacer"></div>
                     <div class="businessOptions">
@@ -72,7 +71,6 @@
                 <NavSpacer />
                 <FooterSection />
             </div>
-            
         </div>        
     </div>
 </template>
@@ -132,7 +130,11 @@ export default {
                 }
             }
             if (this[filter] == "") {
-                this[filter] = filter;
+                if (filter == "CaseCompetition") {
+                    this[filter] = "Case Competition";
+                } else {
+                    this[filter] = filter;
+                }
             } else {
                 this[filter] = "";
             }
@@ -380,7 +382,7 @@ h3 {
 }
 
 .cellWrapper {
-    width: 100vw;
+    /* width: 100vw; */
     z-index: 0;
     display: flex;
     flex-direction: column;
@@ -463,7 +465,7 @@ h3 {
 
 @media screen and (max-width: 1000px) {
     .cellWrapper {
-        width: 100vw;
+        /* width: 100vw; */
     }
     button {
         z-index: 1000 !important;
