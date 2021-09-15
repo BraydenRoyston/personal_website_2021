@@ -1,6 +1,7 @@
 <template>
     <div class="cellWrapper">
         <div class="header">
+            <div class="year">{{ year }}</div>
             <div class="title">
                 <h2>{{ title }}</h2>
             </div>
@@ -50,6 +51,10 @@ export default {
         tags: {
             type: Array,
             required: false,
+        },
+        year: {
+            type: String,
+            required: false,
         }
     }
 }
@@ -94,6 +99,12 @@ a {
     font-size: var(--fs-small);
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.year {
+    color: var(--highlight);
+    transition: color 1s ease;
+    font-size: var(--fs-small);
 }
 
 .description {

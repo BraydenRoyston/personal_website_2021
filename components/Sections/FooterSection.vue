@@ -6,7 +6,7 @@
             <SocialRow />
         </div>
         <div class="copyright">
-            Made from scratch by Brayden Royston. Works cited: Coffee and Persistance. Copyright 2021.
+            Made by Brayden Royston using Vue & Nuxt. Works cited: Coffee and Persistance. Copyright 2021.
         </div>
     </div>
 </template>
@@ -98,5 +98,11 @@ h3 {
     font-size: var(--fs-extra-small);
     transition: color 1s ease;
     margin-bottom: 1.5vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .exit {
+        width: 80%;
+    }
 }
 </style>

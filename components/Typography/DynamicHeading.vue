@@ -9,9 +9,8 @@ export default {
             type: String,
             required: true,
             default: "Error: Missing text prop",
-        }
-    }
-
+        },
+    },
 }
 </script>
 

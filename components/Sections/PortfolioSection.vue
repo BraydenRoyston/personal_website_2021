@@ -6,9 +6,10 @@
             <div class="filtersWrapper">
                 <h1>What do you care about?</h1>
                 <h3>Click the filters below to check out my experiences that relate to your interests!</h3>
+                <button class="option" @click="switchFilter('reset')">Reset Filters</button>
                 <div class="options">
                     <div class="softwareOptions">
-                        <div class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
+                        <div class="option" :class="softwareActive" id="big">
                             Software Topics
                         </div>
                         <transition name="softwareTopicsTransition" appear>
@@ -33,7 +34,7 @@
                     </div>
                     <div class="optionsSpacer"></div>
                     <div class="businessOptions">
-                        <div class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
+                        <div class="option" :class="businessActive" id="big">
                             Business Topics
                         </div>
                         <transition name="businessTopicsTransition"  appear>
@@ -58,6 +59,7 @@
                     <PortfolioCell
                         v-for="project in liveProjects"
                         :key="project.title"
+                        :year="project.year"
                         :title="project.title"
                         :links="project.links"
                         :description="project.description"
@@ -102,30 +104,40 @@ export default {
     },
     methods: {
         switchFilter(filter) {
-            if (filter == "Software") {
-                if (this[filter] == "Software") {
-                    this["WebDev"] = "";
-                    this["MobileDev"] = "";
-                    this["FinTech"] = "";
-                    this["Internship"] = "";
-                    this["Hackathon"] = "";
-                } else {
-                    this["WebDev"] = "WebDev";
-                    this["MobileDev"] = "MobileDev";
-                    this["FinTech"] = "FinTech";
-                    this["Internship"] = "Internship";
-                    this["Hackathon"] = "Hackathon";
-                }
-            } else if (filter == "Business") {
-                if (this[filter] == "Business") {
-                    this["Finance"] = "";
-                    this["Consulting"] = "";
-                    this["CaseCompetition"] = "";
-                } else {
-                    this["Finance"] = "Finance";
-                    this["Consulting"] = "Consulting";
-                    this["CaseCompetition"] = "Case Competition";
-                }
+            // if (filter == "Software") {
+            //     if (this[filter] == "Software") {
+            //         this["WebDev"] = "";
+            //         this["MobileDev"] = "";
+            //         this["FinTech"] = "";
+            //         this["Internship"] = "";
+            //         this["Hackathon"] = "";
+            //     } else {
+            //         this["WebDev"] = "WebDev";
+            //         this["MobileDev"] = "MobileDev";
+            //         this["FinTech"] = "FinTech";
+            //         this["Internship"] = "Internship";
+            //         this["Hackathon"] = "Hackathon";
+            //     }
+            // } else if (filter == "Business") {
+            //     if (this[filter] == "Business") {
+            //         this["Finance"] = "";
+            //         this["Consulting"] = "";
+            //         this["CaseCompetition"] = "";
+            //     } else {
+            //         this["Finance"] = "Finance";
+            //         this["Consulting"] = "Consulting";
+            //         this["CaseCompetition"] = "Case Competition";
+            //     }
+            // }
+            if (filter == "reset") {
+                this["WebDev"] = "";
+                this["MobileDev"] = "";
+                this["FinTech"] = "";
+                this["Internship"] = "";
+                this["Hackathon"] = "";
+                this["Finance"] = "";
+                this["Consulting"] = "";
+                this["CaseCompetition"] = "";
             }
             if (this[filter] == "") {
                 if (filter == "CaseCompetition") {
@@ -352,6 +364,10 @@ button {
     font-size: var(--fs-extra-small);
 
     transition: all 1s ease;
+}
+
+button:hover {
+    background-color: var(--primary);
 }
 
 #big {

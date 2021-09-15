@@ -137,6 +137,10 @@ export default {
     transition: color 1s ease;
 }
 
+.nav-link:hover {
+    color: var(--highlight);
+}
+
 .switch-list-item {
     display: flex;
     align-items: center;
@@ -150,6 +154,9 @@ export default {
   .logoDarkMode {
       height: 10vw;
       width: 10vw;
+  }
+  .name {
+      display: none;
   }
 }
 </style>

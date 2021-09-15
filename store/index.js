@@ -4,6 +4,7 @@ export const state = () => ({
     projects: [
       {
         title: "TD Lab - Fullstack Developer",
+        year: "2021",
         links: [
           {
               title: "Website", 
@@ -56,6 +57,7 @@ export const state = () => ({
       },
       {
         title: "Clove - Software Engineer",
+        year: "2021",
         links: [
           {
               title: "Website", 
@@ -94,6 +96,7 @@ export const state = () => ({
       },
       {
         title: "Freelance Web Development",
+        year: "2021",
         links: [
           {
               title: "Website", 
@@ -129,6 +132,7 @@ export const state = () => ({
       },
       {
         title: "The GoldenHack - Software Developer",
+        year: "2021",
         links: [
           {
               title: "Website", 
@@ -168,6 +172,7 @@ export const state = () => ({
       },
       {
         title: "JDCC Laurier - Digital Strategy Academic Delegate",
+        year: "2021",
         links: [
           {
               title: "Website", 
@@ -199,6 +204,7 @@ export const state = () => ({
       },
       {
         title: "Innovapost - DevOps Consultant",
+        year: "2020",
         links: [
           {
               title: "Website", 
@@ -241,6 +247,7 @@ export const state = () => ({
       },
       {
         title: "To the Moon",
+        year: "2021",
         links: [
           {
               title: "DevPost", 
@@ -282,6 +289,7 @@ export const state = () => ({
       },
       {
         title: "UBank",
+        year: "2020",
         links: [
           {
               title: "DevPost", 
@@ -323,6 +331,7 @@ export const state = () => ({
       },
       {
         title: "Fidelity x Xlerate Lazardis Case Competition",
+        year: "2020",
         description: [
           {
               value: "Finished 1st out of 56 teams comprised of students from universities across Ontario, receiving a cash prize of $4000.",
@@ -351,6 +360,7 @@ export const state = () => ({
       },
       {
         title: "Microsoft x Laurier Marketing Association Case Competition",
+        year: "2020",
         description: [
           {
               value: "Finished 3rd out of 35 teams comprised of students from Wilfrid Laurier University and the University of Waterloo, receiving a cash prize of $200.",
@@ -375,6 +385,7 @@ export const state = () => ({
       },
       {
         title: "HP Live Case Competition",
+        year: "2020",
         description: [
           {
               value: "Finished 2nd out of 300 teams comprised of Wilfrid Laurier's BBA class of 2024, receiving a cash prize of $2600.",
@@ -403,6 +414,7 @@ export const state = () => ({
       },
       {
         title: "LazICC Local x Foreseters Financial Case Competition",
+        year: "2019",
         description: [
           {
               value: "Finished 2nd out of 35 teams comprised of Laurier BBA students, receiving a $250 cash prize.",
