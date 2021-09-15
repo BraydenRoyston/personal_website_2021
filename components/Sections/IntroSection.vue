@@ -64,7 +64,6 @@ export default {
     transition: background-color 1s ease, color 1s ease, background-image 1s ease;
     background: var(--background);
     background-size: cover;
-    /* color: var(--text); */
     text-align: center;
 
     display: flex;
@@ -101,7 +100,6 @@ export default {
 }
 
 .waveDivider {
-    /* aspect-ratio: 500/300; */
     width: 100%;
     
     background-size: cover;

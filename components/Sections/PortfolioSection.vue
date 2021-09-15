@@ -11,7 +11,6 @@
                         <div class="option" :class="softwareActive" @click="switchFilter('Software')" id="big">
                             Software Topics
                         </div>
-                        <!-- v-if="showSoftwareOptions"  -->
                         <transition name="softwareTopicsTransition" appear>
                             <div class="softwareTopics">
                                 <button class="option" :class="InternshipActive" @click="switchFilter('Internship')">
@@ -37,7 +36,6 @@
                         <div class="option" :class="businessActive" @click="switchFilter('Business')" id="big">
                             Business Topics
                         </div>
-                        <!-- v-if="showBusinessOptions" -->
                         <transition name="businessTopicsTransition"  appear>
                             <div class="businessTopics">
                                 <button class="option" :class="consultingActive" @click="switchFilter('Consulting')">
@@ -323,8 +321,6 @@ export default {
 .optionsSpacer {
     width: 10%;
     height: inherit;
-    /* border-right: 2px solid var(--highlight); */
-    /* border-left: 2px solid var(--highlight); */
 }
 
 .businessOptions {
@@ -383,8 +379,6 @@ h3 {
 
 .cellWrapper {
     width: 100vw;
-    /* position: fixed; */
-    /* left: 0; */
     z-index: 0;
     display: flex;
     flex-direction: column;
@@ -402,7 +396,6 @@ h3 {
 .project-list-enter-active {
     transition: opacity 1s ease;
     position: static !important;
-    /* position: absolute; */
 }
 .project-list-leave-active {
     transition: opacity 1s ease;
@@ -411,8 +404,6 @@ h3 {
 
 .project-list-move {
   transition: transform 1s ease;
-    /* position: static !important; */
-
 }
 
 #ul-projects {
@@ -470,9 +461,6 @@ h3 {
 }
 
 @media screen and (max-width: 1000px) {
-    .cellWrapper {
-        /* width: 100vw; */
-    }
     button {
         z-index: 1000 !important;
     }

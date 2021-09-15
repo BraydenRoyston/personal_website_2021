@@ -123,7 +123,6 @@ p {
     color: var(--text);
     background: var(--primary);
     transition: color 1s ease, background-color 1s ease;
-    /* border: 1px solid black; */
     border-radius: 10px;
 }
 
@@ -149,7 +148,6 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* background: red; */
 }
 
 @media screen and (max-width: 1000px) {

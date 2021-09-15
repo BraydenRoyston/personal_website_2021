@@ -56,7 +56,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 :root {
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
   /* typography */
   font-family: Noto Sans KR;
   font-size: 8px;
@@ -118,7 +118,7 @@ body {
   transition: opacity 1s;
   position: absolute;
 }
-.loader-enter, .loader-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.loader-enter, .loader-leave-to {
   opacity: 0;
   position: absolute;
 }

@@ -120,7 +120,6 @@ span {
 }
 
 .waveDivider {
-    /* aspect-ratio: 950/300; */
     width: 100%;
     
     background-size: cover;

@@ -63,7 +63,7 @@ export default {
 .sections {
   scroll-snap-type: y;
   overflow-y: scroll;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   max-width: 100%;
   height: 100vh;
   position: fixed;
@@ -79,8 +79,6 @@ export default {
   background-blend-mode: multiple;
   color: var(--text);
   text-align: center;
-  /* scroll-snap-align: start; */
-
 }
 
 .stuff {
@@ -91,8 +89,6 @@ export default {
   background-blend-mode: multiple;
   color: var(--text);
   text-align: center;
-  /* scroll-snap-align: start; */
-
 }
 
 .middleNavSpacer {
