@@ -17,6 +17,15 @@
   "LayoutTopSpacer": {
     "description": "Auto imported from components/Layout/TopSpacer.vue"
   },
+  "UserInterfaceModeButton": {
+    "description": "Auto imported from components/UserInterface/ModeButton.vue"
+  },
+  "UserInterfaceScrollButton": {
+    "description": "Auto imported from components/UserInterface/ScrollButton.vue"
+  },
+  "UserInterfaceSocialButton": {
+    "description": "Auto imported from components/UserInterface/SocialButton.vue"
+  },
   "SectionsBioSection": {
     "description": "Auto imported from components/Sections/BioSection.vue"
   },
@@ -37,14 +46,5 @@
   },
   "TypographySecondaryHeading": {
     "description": "Auto imported from components/Typography/SecondaryHeading.vue"
-  },
-  "UserInterfaceModeButton": {
-    "description": "Auto imported from components/UserInterface/ModeButton.vue"
-  },
-  "UserInterfaceScrollButton": {
-    "description": "Auto imported from components/UserInterface/ScrollButton.vue"
-  },
-  "UserInterfaceSocialButton": {
-    "description": "Auto imported from components/UserInterface/SocialButton.vue"
   }
 }

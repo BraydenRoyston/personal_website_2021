@@ -63,7 +63,7 @@ export default {
 .sections {
   scroll-snap-type: y;
   overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: 100vh;
   position: fixed;
   top: 0;
