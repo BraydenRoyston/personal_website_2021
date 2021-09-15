@@ -45,9 +45,8 @@ export default {
           "love developing cool stuff.",
           "am a problem solver.",
           "learn quick.",
-          "am a student",
+          "am a student.",
           "enjoy public speaking.",
-          "read books.",
       ],
       dynamicIndex: -1,
     }
