@@ -401,6 +401,8 @@ h3 {
 
 .project-list-enter-active {
     transition: opacity 1s ease;
+    position: static !important;
+    /* position: absolute; */
 }
 .project-list-leave-active {
     transition: opacity 1s ease;
@@ -409,6 +411,8 @@ h3 {
 
 .project-list-move {
   transition: transform 1s ease;
+    /* position: static !important; */
+
 }
 
 #ul-projects {
