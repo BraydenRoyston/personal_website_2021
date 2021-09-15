@@ -64,6 +64,7 @@ export default {
   scroll-snap-type: y;
   overflow-y: scroll;
   /* overflow-x: hidden; */
+  max-width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
