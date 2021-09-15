@@ -56,7 +56,7 @@
                 </div>
             </div>
              <div class="cellWrapper">
-                <transition-group tag="ul" name="project-list" id="ul-projects" appear>
+                <transition-group name="project-list" id="ul-projects" appear>
                     <PortfolioCell
                         v-for="project in liveProjects"
                         :key="project.title"
