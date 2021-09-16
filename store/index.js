@@ -17,8 +17,11 @@ export const state = () => ({
               key: 0,
           },
           {
-              value: "Created a web application using VueJS to allow TD customers to keep track of the carbon footprint and offset it accordingly.",
+              value: "Created a mobile application using Flutter and Firebase to allow TD customers to keep track of the carbon footprint and offset it accordingly.",
               key: 1,
+          },
+          {
+            value: "Created an event management web application that allowed students in university to easily see what events related to academics and career growth were occurring near them un using VueJS."
           },
         ],
         techStack: [
@@ -213,7 +216,7 @@ export const state = () => ({
         ],
         description: [
           {
-              value: "Worked with the Microsoft Azure data that connects 6200 Canada Post offices, creating system architecture diagrams and ARM alerts.",
+              value: "Worked with the Microsoft Azure database that connects 6200 Canada Post offices, creating system architecture diagrams and ARM alerts.",
               key: 0,
           },
           {
