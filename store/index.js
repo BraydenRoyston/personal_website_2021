@@ -105,6 +105,10 @@ export const state = () => ({
               title: "Website", 
               value: "https://braydenroyston.ca",
           },
+          {
+              title: "GitHub",
+              value: "https://github.com/BraydenRoyston/personal_website_2021",
+          }
         ],
         description: [
           {
