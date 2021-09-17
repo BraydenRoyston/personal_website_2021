@@ -55,6 +55,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+
 :root {
   overflow-y: hidden;
   /* typography */

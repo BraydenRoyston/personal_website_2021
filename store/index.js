@@ -108,7 +108,7 @@ export const state = () => ({
         ],
         description: [
           {
-              value: "Developed this website from scratch using VueJS [my JS framework of choice, seriously check it out if you haven't already!] and NuxtJS.",
+              value: "Developed this website on the JAMstack using VueJS/NuxtJS, my JavaScript framework of choice!",
               key: 0,
           },
           {
