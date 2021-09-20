@@ -8,13 +8,15 @@
             <SecondaryHeading
                 :text="intro"
             />
-            <transition name="dynamicText" mode="out-in" appear>
-                <svg width="100%" height="100%" key="dynamicIndex">
-                    <text x="50%" y="60%"  text-anchor="middle"  >
-                    {{ dynamics[dynamicIndex] }}
-                    </text>
-                </svg>
-            </transition>
+            <keep-alive>
+                <transition name="dynamicText" mode="out-in" appear>
+                    <svg width="100%" height="100%" key="dynamicIndex">
+                        <text x="50%" y="60%"  text-anchor="middle"  >
+                        {{ dynamics[dynamicIndex] }}
+                        </text>
+                    </svg>
+                </transition>
+            </keep-alive>
             <SecondaryHeading 
                 :text="invitation"
             />

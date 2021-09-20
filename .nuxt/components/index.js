@@ -7,13 +7,13 @@ export { default as LayoutTopSpacer } from '../../components/Layout/TopSpacer.vu
 export { default as UserInterfaceModeButton } from '../../components/UserInterface/ModeButton.vue'
 export { default as UserInterfaceScrollButton } from '../../components/UserInterface/ScrollButton.vue'
 export { default as UserInterfaceSocialButton } from '../../components/UserInterface/SocialButton.vue'
-export { default as TypographyDynamicHeading } from '../../components/Typography/DynamicHeading.vue'
-export { default as TypographyPrimaryHeading } from '../../components/Typography/PrimaryHeading.vue'
-export { default as TypographySecondaryHeading } from '../../components/Typography/SecondaryHeading.vue'
 export { default as SectionsBioSection } from '../../components/Sections/BioSection.vue'
 export { default as SectionsFooterSection } from '../../components/Sections/FooterSection.vue'
 export { default as SectionsIntroSection } from '../../components/Sections/IntroSection.vue'
 export { default as SectionsPortfolioSection } from '../../components/Sections/PortfolioSection.vue'
+export { default as TypographyDynamicHeading } from '../../components/Typography/DynamicHeading.vue'
+export { default as TypographyPrimaryHeading } from '../../components/Typography/PrimaryHeading.vue'
+export { default as TypographySecondaryHeading } from '../../components/Typography/SecondaryHeading.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -1,10 +1,10 @@
 <template>
     <div class="cellWrapper">
+        <div class="title">
+            <h2>{{ title }}</h2>
+        </div>
         <div class="header">
             <div class="year">{{ year }}</div>
-            <div class="title">
-                <h2>{{ title }}</h2>
-            </div>
             <div class="links">
                 <a v-for="link in links" :key="link.title" :href="link.value" target="_blank">
                     {{ link.title }}
@@ -91,6 +91,7 @@ h2 {
     color: var(--highlight);
     transition: color 1s ease;
     font-size: var(--fs-medium);
+    margin-top: 10px;
 }
 
 a {

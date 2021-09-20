@@ -69,7 +69,7 @@ export const state = () => ({
         ],
         description: [
           {
-              value: "One of the founding engineers for Clove, a start-up based in San Francisco with the goal of providing consumers and businesses with the ability to make informed, eco-friendly choices in the e-commerce space.",
+              value: "One of the founding engineers for Clove, a start-up based in San Diego with the goal of providing consumers and businesses with the ability to make informed, eco-friendly choices in the e-commerce space.",
               key: 0,
           },
           {
@@ -250,6 +250,62 @@ export const state = () => ({
             {
               value: "Consulting"
             }
+        ],
+      },
+      {
+        title: "Lyricalculus",
+        year: "2021",
+        links: [
+          {
+              title: "DevPost", 
+              value: "https://devpost.com/software/lyricalculus",
+          },
+          {
+            title: "Website",
+            value: "https://www.lyricalculus.tech"
+          },
+          {
+            title: "GitHub",
+            value: "https://github.com/BraydenRoyston/lyricalculus"
+          }
+        ],
+        description: [
+          {
+              value: "Developed \"Lyricalculus\", an application that uses machine learning to predict how lyrical a string of rap lyrics are using SciKit and GloVe.",
+              key: 0,
+          },
+          {
+              value: "Designed and created a front-end web application using VueJS with NuxtJS, as well as an iOS mobile application using Swift with SwiftUI.",
+              key: 1,
+          },
+        ],
+        techStack: [
+          {
+            value: "VueJS",
+          },
+          {
+            value: "NuxtJS",
+          },
+          {
+            value: "Swift",
+          },
+          {
+            value: "SwiftUI",
+          },
+        ],
+        tags: [
+            {
+              value: "Hackathon"
+            },
+            {
+              value: "Software"
+            },
+            {
+              value: "WebDev"
+            },
+            {
+              value: "MobileDev"
+            },
         ],
       },
       {
