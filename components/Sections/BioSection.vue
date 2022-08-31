@@ -11,13 +11,13 @@
                 :text="title"
             />
             <p class="introduction">
-                I'm a double degree student currently studying at the <span>University of Waterloo</span> 
+                I'm a 4th year double degree student currently studying at the <span>University of Waterloo</span> 
                 and <span>Wilfrid Laurier University</span>
                 completing a <span>Bachelor of Computer Science</span> and <span>Bachelor of Business Administration</span> respectively. Great to meet you!
                 <br />
                 <br />
-                I just finished a co-op term as a <span>Fullstack Developer at TD Lab</span>, gaining valuable experience with
-                Flutter, Firebase, and VueJS. I'm currently on the hunt for an awesome job for the <span>Winter 2022 season!</span>
+                I just finished a co-op term as a <span>Software Engineer at Gadze Finance</span>, gaining valuable experience in DeFi and quantitative software engineering.
+                I'm currently on the hunt for an awesome job for the <span>Summer 2023 season!</span>
                 <br />
                 <br />
                 <span>Scroll below to learn more about some of my projects and experiences :D</span>

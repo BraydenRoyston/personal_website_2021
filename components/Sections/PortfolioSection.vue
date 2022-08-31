@@ -5,7 +5,7 @@
         <div class="portfolio" :class="waveType">
             <div class="filtersWrapper">
                 <h1>What do you care about?</h1>
-                <h3>Click the filters below to check out my experiences that relate to your interests!</h3>
+                <h3>Click the filters below to fine-tune my experiences to your interests!</h3>
                 <button class="option" @click="switchFilter('reset')">Reset Filters</button>
                 <div class="options">
                     <div class="softwareOptions">
@@ -91,14 +91,14 @@ export default {
         return {
             Software: "",
             Business: "",
-            Internship: "",
-            WebDev: "",
-            MobileDev: "",
-            FinTech: "",
-            Hackathon: "",
-            Finance: "",
-            Consulting: "",
-            CaseCompetition: "",
+            Internship: "Internship",
+            WebDev: "WebDev",
+            MobileDev: "MobileDev",
+            FinTech: "FinTech",
+            Hackathon: "Hackathon",
+            Finance: "Finance",
+            Consulting: "Consulting",
+            CaseCompetition: "CaseCompetition",
             projects: this.$store.state.projects,
         }
     },

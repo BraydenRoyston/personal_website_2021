@@ -3,7 +3,69 @@ export const state = () => ({
     loaded: false,
     projects: [
       {
-        title: "TD Lab - Fullstack Developer",
+        title: "Gadze Finance - Software Engineer",
+        year: "2022",
+        links: [
+          {
+              title: "Website", 
+              value: "https://gadze.finance",
+          },
+        ],
+        description: [
+          {
+              value: "Spearheaded development of a client and analyst-facing real-time portfolio analysis application that displayed the performance of the fund’s investment strategies to 50 investors through a clean user experience using ReactJS/NextJS/NodeJS/MySQL/Web3.",
+              key: 0,
+          },
+          {
+              value: "Analyzed smart contracts of various DeFi protocols to implement health metric API endpoints. The endpoints were built with Web3/NodeJS/AWS and successfully monitored the health and performance of fund’s strategies which had a total value of $48M USD.",
+              key: 1,
+          },
+          {
+            value: "Led devlopment of a new security tool using ReactJS/NextJS/NodeJS/Web3/MySQL that decoded and interpreted smart contracts, speeding up the fund’s trading process by 50% and significantly boosting analyst confidence in contract legitimacy.",
+            key: 2,
+          },
+          {
+            value: "Utilized Redux for a frontend refactor of performance app, eliminating lag and decreasing load times by 90%.",
+            key: 3
+          }
+        ],
+        techStack: [
+          {
+            value: "ReactJS/NextJS",
+          },
+          {
+            value: "MySQL"
+          },
+          {
+            value: "AWS"
+          },
+          {
+            value: "Web3"
+          },
+          {
+            value: "NodeJS"
+          }
+        ],
+        tags: [
+            {
+              value: "Internship"
+            },
+            {
+              value: "Software"
+            },
+            {
+              value: "WebDev"
+            },
+            {
+              value: "FinTech"
+            },
+            {
+              value: "Finance"
+            }
+        ],
+      },
+      {
+        title: "TD Lab - Software Engineer",
         year: "2021",
         links: [
           {
@@ -21,7 +83,8 @@ export const state = () => ({
               key: 1,
           },
           {
-            value: "Created an event management web application that allowed students in university to easily see what events related to academics and career growth were occurring near them un using VueJS."
+            value: "Created an event management web application that allowed students in university to easily see what events related to academics and career growth were occurring near them using VueJS.",
+            key: 2,
           },
         ],
         techStack: [
@@ -99,7 +162,7 @@ export const state = () => ({
       },
       {
         title: "Freelance Web Development",
-        year: "2021",
+        year: "2022",
         links: [
           {
               title: "Website", 
@@ -139,7 +202,7 @@ export const state = () => ({
       },
       {
         title: "The GoldenHack - Software Developer",
-        year: "2021",
+        year: "2022",
         links: [
           {
               title: "Website", 
@@ -179,7 +242,7 @@ export const state = () => ({
       },
       {
         title: "JDCC Laurier - Digital Strategy Academic Delegate",
-        year: "2021",
+        year: "2022",
         links: [
           {
               title: "Website", 
@@ -188,17 +251,25 @@ export const state = () => ({
         ],
         description: [
           {
+            value: "One of eight international delegates (2022) representing Wilfrid Laurier University in Belgrade, Serbia as well as Rotterdam, the Netherlands.",
+            key: 0
+          },
+          {
+            key: "Coaching younger members of the Laurier Case Team on the entrepreneurship track on analytical case solving and presentation skills.",
+            key: 1,
+          },
+          {
+            value: "Awarded 2nd/35 at the BBICC competition in Belgrade (2022), 2nd/10 in JDCC Digital Strategy (2022), 3rd/10 in JDCC Entrepreneurship (2021), 1st/100 at Lazaridis Xlerate (2021).",
+            key: 2
+          },
+          {
               value: "One of 3 students the represents Wilfrid Laurier as a JDCC academic delegate in the Digital Strategy (2021) and Entrepreneurship (2020) tracks.",
-              key: 0,
+              key: 3,
           },
           {
               value: "Analyzed, solved, and presented business consulting cases in the fields of tech, management, and business strategy.",
-              key: 1,
+              key: 4,
           },
-          {
-            value: "Placed 2nd overall in the 2020 JDCC competition.",
-            key: 2,
-          }
         ],
         tags: [
             {
@@ -368,6 +439,9 @@ export const state = () => ({
               value: "Developed a web application using ReactJS, a back-end database using Firebase, and the SMS system using Twillio and Node.js.",
               key: 1,
           },
+          {
+              value: "Received 3rd place overall at HackThe6ix 2020."
+          }
         ],
         techStack: [
           {

@@ -8,15 +8,21 @@
             <SecondaryHeading
                 :text="intro"
             />
-            <keep-alive>
-                <transition name="dynamicText" mode="out-in" appear>
-                    <svg width="100%" height="100%" key="dynamicIndex">
-                        <text x="50%" y="60%"  text-anchor="middle"  >
-                        {{ dynamics[dynamicIndex] }}
-                        </text>
-                    </svg>
-                </transition>
-            </keep-alive>
+            <div class="typeContainer">
+                <vue-typer
+                    :text='dynamics'
+                    :repeat='Infinity'
+                    :shuffle='false'
+                    initial-action='typing'
+                    :pre-type-delay='70'
+                    :type-delay='70'
+                    :pre-erase-delay='2000'
+                    :erase-delay='250'
+                    erase-style='backspace'
+                    :erase-on-complete='false'
+                    caret-animation='blink'
+                ></vue-typer>
+            </div>
             <SecondaryHeading 
                 :text="invitation"
             />
@@ -30,6 +36,7 @@ import PrimaryHeading from '../Typography/PrimaryHeading.vue';
 import SecondaryHeading from '../Typography/SecondaryHeading.vue';
 import DynamicHeading from '../Typography/DynamicHeading.vue';
 import ScrollButton from '../UserInterface/ScrollButton.vue';
+import { VueTyper } from 'vue-typer';
 
 export default {
   components: {
@@ -37,6 +44,7 @@ export default {
     SecondaryHeading,
     DynamicHeading,
     ScrollButton,
+    'vue-typer': VueTyper
   },
   data() {
     return {
@@ -45,10 +53,9 @@ export default {
       invitation: "Scroll down to learn more about me!",
       dynamics: [
           "love developing cool stuff.",
-          "am a problem solver.",
+          "solve complex problems.",
           "learn quick.",
-          "am a student.",
-          "enjoy public speaking.",
+          "am forever learning.",
       ],
       dynamicIndex: -1,
     }
@@ -58,7 +65,7 @@ export default {
   },
   methods: {
       changeDynamicText() {
-          if (this.dynamicIndex == 5) {
+          if (this.dynamicIndex == 3) {
               this.dynamicIndex = 0;
           } else {
               this.dynamicIndex++;
@@ -81,6 +88,30 @@ export default {
 </script>
 
 <style scoped>
+
+.typeContainer {
+    background: solid;
+    height: calc(var(--fs-large) + 5px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+this class alters the dynamically typed text.
+it's needed because default way to change text specified by vue-typer
+library doesn't work.
+*/
+::v-deep .typed {
+  color: var(--highlight);
+  font-size: var(--fs-large);
+  font-weight: 700;
+  stroke: var(--primary);
+  stroke-width: 1;
+}
+
 .intro {
     scroll-behavior: smooth;
     height: 90vh;
@@ -96,11 +127,6 @@ export default {
     justify-content: center;
 }
 
-/* .intro * {
-    margin-top: 5px;
-    margin-bottom: 5px;
-} */
-
 .logo {
     height: 60vh;
     width: auto;
@@ -114,18 +140,6 @@ export default {
     justify-content: center;
     align-items: center;
     width: 40vw;
-}
-
-/* .dynamicText-enter-active {
-  /* animation: textAnimation 2s; */
-/* } */
-/* .dynamicText-leave-active { */
-  /* animation: textAnimation 2s reverse; */
-/* } */
-
-@keyframes textAnimation {
-    /* 0% { opacity: 0}
-    100% { opacity: 1 } */
 }
 
 @media screen and (max-width: 725px) {
@@ -155,35 +169,5 @@ export default {
 
 .waveDividerDark {
     background-image: url('../../assets/wave1_dark.svg');
-}
-
-svg {
-    height: 15vh;
-}
-
-svg text {
-  stroke: var(--primary);
-  font-size: var(--fs-large);
-  font-weight: 700;
-  stroke-width: 1;
- 
-  animation: textAnimate 4s infinite;
-}
-
-@keyframes textAnimate {
-    0% {
-        opacity: 0;
-        stroke-dasharray: 50% 0%;
-        fill: var(--highlight);
-    }
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        stroke-dasharray: 0% 50%;
-        fill: var(--highlight);
-        opacity: 0;
-    }
 }
 </style>
