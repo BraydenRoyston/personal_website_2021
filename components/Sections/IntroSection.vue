@@ -17,7 +17,7 @@
                     :pre-type-delay='70'
                     :type-delay='70'
                     :pre-erase-delay='2000'
-                    :erase-delay='250'
+                    :erase-delay='70'
                     erase-style='backspace'
                     :erase-on-complete='false'
                     caret-animation='blink'
@@ -55,7 +55,6 @@ export default {
           "love developing cool stuff.",
           "solve complex problems.",
           "learn quick.",
-          "am forever learning.",
       ],
       dynamicIndex: -1,
     }
@@ -65,7 +64,7 @@ export default {
   },
   methods: {
       changeDynamicText() {
-          if (this.dynamicIndex == 3) {
+          if (this.dynamicIndex == 2) {
               this.dynamicIndex = 0;
           } else {
               this.dynamicIndex++;
